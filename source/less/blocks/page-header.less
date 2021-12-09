@@ -1,7 +1,32 @@
 .page-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 18px;
+  height: 65px;
+  padding: 0 20px;
+  max-width: 1440px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 53px 110px;
+  }
+}
+
+.page-header__logo-container {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+    height: 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 112px;
+  }
 }
 
 .page-header__logo {

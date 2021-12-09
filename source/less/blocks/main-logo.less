@@ -2,7 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    align-items: flex-start;
+    margin-left: 117px;
+  }
 }
 
 .main-logo__wrapper {
@@ -11,9 +15,17 @@
   align-items: center;
   position: relative;
   background-image: url("../../img/main-bg.svg");
+  background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(104, 183, 56, 0.85);
   padding: 27px 35px 164px;
+
+  @media (min-width: @tablet-width) {
+    align-items: flex-start;
+    background-image: none;
+    background-color: #ffffff;
+    padding: 27px 0 50px;
+  }
 }
 
 .main-logo__title {
@@ -27,6 +39,15 @@
   padding: 0;
   margin: 0;
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    text-align: left;
+    width: 414px;
+    margin-bottom: 41px;
+  }
 }
 
 .main-logo__subtitle {
@@ -39,12 +60,29 @@
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-align: left;
+  }
 }
 
 .main-logo__image {
   position: absolute;
-  top: 55%;
-  left: 6%;
+  top: 50%;
+  left: 30%;
+
+  @media (min-width: @tablet-width) {
+    top: 70%;
+    left: 60%;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 30%;
+    left: 110%;
+  }
 }
 
 .main-logo__button {
@@ -61,4 +99,12 @@
   margin-top: 138px;
   padding: 7px 20px;
   width: 240px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 526px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 267px;
+  }
 }

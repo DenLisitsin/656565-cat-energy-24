@@ -1,19 +1,42 @@
 .page-footer {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  max-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 1440px;
+  }
 }
 
 .page-footer__location-wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
 }
 
 .page-footer__address {
   display: flex;
   justify-content: space-between;
   padding: 28px 20px 26px;
-  background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 70px 56px;
+    max-width: 1440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    padding: 60px 80px 60px;
+    width: 565px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+  }
 }
 
 .page-footer__title {
@@ -25,6 +48,12 @@
   color: #111111;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 172px;
+  }
 }
 
 .page-footer__text {
@@ -35,6 +64,17 @@
   line-height: 20px;
   color: #444444;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    max-width: 160px;
+  }
+}
+
+.page-footer__map {
+  margin: 0 auto;
 }
 
 .page-footer__wrapper {
@@ -42,16 +82,34 @@
   flex-direction: column;
   align-items: center;
   padding: 39px 20px 22px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 58px 30px 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 57px 110px 58px;
+  }
 }
 
 .page-footer__link {
   padding-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .page-footer__academy-container {
   display: flex;
   align-items: center;
   padding: 22px 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .page-footer__academy-link {
@@ -63,4 +121,9 @@
   color: #444444;
   text-decoration: none;
   margin-right: 140px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+    width: 114px;
+  }
 }
