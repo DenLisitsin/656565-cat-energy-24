@@ -22,10 +22,12 @@
   display: flex;
   justify-content: space-between;
   padding: 28px 20px 26px;
+  margin: 0 auto;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     padding: 60px 70px 56px;
-    max-width: 1440px;
+    min-width: 768px;
   }
 
   @media (min-width: @desktop-width) {
@@ -75,6 +77,19 @@
 
 .page-footer__map {
   margin: 0 auto;
+  max-width: 1440px;
+
+  @media (min-width: @tablet-width) {
+    content: url("../img/location-map-tablet.png");
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: url("../img/location-map-desktop.png");
+    width: 1440px;
+    height: 400px;
+  }
 }
 
 .page-footer__wrapper {
@@ -96,6 +111,15 @@
 
 .page-footer__link {
   padding-bottom: 32px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -122,8 +146,26 @@
   text-decoration: none;
   margin-right: 140px;
 
+  &:hover {
+    color: rgba(69, 69, 69, 0.3);
+  }
+
   @media (min-width: @tablet-width) {
     margin-right: 22px;
     width: 114px;
+  }
+}
+
+.page-footer__academy-link-logo {
+  &:hover {
+    .academy-logo {
+      fill: @green;
+    }
+  }
+
+  &:active {
+    .academy-logo {
+      fill: rgba(104, 183, 56, 0.3);
+    }
   }
 }

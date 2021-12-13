@@ -52,4 +52,25 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &:last-child:hover {
+    .social-container__image {
+      stroke: @green;
+      fill: none;
+    }
+  }
+}
+
+.social-container__link {
+  &:hover {
+    .social-container__image {
+      fill: @green;
+    }
+  }
+
+  &:active {
+    .social-container__image {
+      fill: rgba(104, 183, 56, 0.3);
+    }
+  }
 }

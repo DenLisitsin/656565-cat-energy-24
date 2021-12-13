@@ -1,16 +1,18 @@
 .main-descriptions {
   padding: 25px 20px 53px;
   margin: 0 auto;
-  max-width: 1440px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px 47px;
     border-bottom: 1px solid #d9d9d9;
+    max-width: 768px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 110px 69px;
     border-bottom: none;
+    max-width: 1440px;
   }
 }
 
@@ -50,11 +52,12 @@
   }
 
   @media (min-width: @desktop-width) {
-    column-gap: 95px;
+    column-gap: 74px;
   }
 }
 
 .main-descriptions__item {
+  position: relative;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -63,17 +66,162 @@
   color: #444444;
   padding-left: 80px;
   margin-bottom: 24px;
+  min-height: 60px;
+  z-index: 1;
 
   &:last-child {
     margin-bottom: 0;
   }
 
+  &::before {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -2px;
+    left: 0;
+    background-color: @green;
+    content: "";
+  }
+
+  &:nth-child(1) {
+    &::after {
+      position: absolute;
+      width: 30px;
+      height: 32px;
+      top: 14px;
+      left: 15px;
+      background-image: url("../img/description-icon_leaf.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  &:nth-child(2) {
+    &::after {
+      position: absolute;
+      width: 29px;
+      height: 31px;
+      top: 13px;
+      left: 15px;
+      background-image: url("../img/description-icon_tub.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      position: absolute;
+      width: 25px;
+      height: 30px;
+      top: 15px;
+      left: 18px;
+      background-image: url("../img/description-icon_eat.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  &:nth-child(4) {
+    &::after {
+      position: absolute;
+      width: 32px;
+      height: 33px;
+      top: 13px;
+      left: 14px;
+      background-image: url("../img/description-icon_weight.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
-    padding: 151px 29px 57px 0;
-    max-width: 230px;
+    padding: 151px 0 33px;
+    max-width: 249px;
     margin-bottom: 0;
     box-sizing: border-box;
+
+    &::before {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: 40px;
+      left: 0;
+      background-color: @green;
+      content: "";
+    }
+
+    &:nth-child(1) {
+      &::after {
+        position: absolute;
+        width: 30px;
+        height: 32px;
+        top: 65px;
+        left: 24px;
+        background-image: url("../img/description-icon_leaf.svg");
+        background-repeat: no-repeat;
+        content: "";
+      }
+    }
+
+    &:nth-child(2) {
+      &::after {
+        position: absolute;
+        width: 29px;
+        height: 31px;
+        top: 65px;
+        left: 24px;
+        background-image: url("../img/description-icon_tub.svg");
+        background-repeat: no-repeat;
+        content: "";
+      }
+    }
+
+    &:nth-child(3) {
+      &::after {
+        position: absolute;
+        width: 25px;
+        height: 30px;
+        top: 65px;
+        left: 28px;
+        background-image: url("../img/description-icon_eat.svg");
+        background-repeat: no-repeat;
+        content: "";
+      }
+    }
+
+    &:nth-child(4) {
+      &::after {
+        position: absolute;
+        width: 32px;
+        height: 33px;
+        top: 63px;
+        left: 24px;
+        background-image: url("../img/description-icon_weight.svg");
+        background-repeat: no-repeat;
+        content: "";
+      }
+    }
+  }
+}
+
+.main-descriptions__number {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: #f2f2f2;
+    top: 0;
+    left: 114px;
+    margin: 0;
+    z-index: -1;
   }
 }
