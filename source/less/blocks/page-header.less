@@ -16,7 +16,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 53px 110px 29px;
+    padding: 46px 110px 29px;
     max-width: 1440px;
   }
 }
@@ -30,7 +30,7 @@
 .page-header__logo-container {
   display: flex;
   align-items: center;
-  min-height: 65px;
+  min-height: 66px;
 
   @media (min-width: @tablet-width) {
     align-items: flex-end;
@@ -38,10 +38,14 @@
 }
 
 .page-header__logo {
-  margin-right: 57px;
+  margin-right: 55px;
 
   &:nth-child(2) {
-    margin-right: 65px;
+    margin-right: 58px;
+
+    img {
+      display: block;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -64,5 +68,13 @@
     content: url("../img/page-header-logo-tablet.svg");
     width: 174px;
     height: 52px;
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    content: url("../img/page-header-logo-desk.svg");
+    width: 202px;
+    height: 59px;
+    display: block;
   }
 }

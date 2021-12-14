@@ -11,7 +11,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 82px 110px 267px;
+    padding: 82px 110px 321px;
     width: 100%;
     max-width: 1440px;
     box-sizing: border-box;
@@ -23,11 +23,15 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  background-image: url("../../img/main-bg.svg");
+  background-image: url("../img/main-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(104, 183, 56, 0.85);
   padding: 27px 35px 164px;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+  }
 
   @media (min-width: @tablet-width) {
     align-items: flex-start;
@@ -81,7 +85,7 @@
     line-height: 20px;
     color: #000000;
     text-align: left;
-    padding-left: 87px;
+    padding-left: 89px;
     margin-bottom: 20px;
   }
 
@@ -93,7 +97,7 @@
 
 .main-logo__image {
   position: absolute;
-  top: 50%;
+  top: 55%;
 
   @media (min-width: @tablet-width) {
     position: static;
@@ -124,7 +128,7 @@
   text-align: center;
   background-color: @green;
   margin-top: 138px;
-  padding: 7px 20px;
+  padding: 11px 20px;
   width: 240px;
   z-index: 1;
 
@@ -142,7 +146,7 @@
     position: absolute;
     top: 294px;
     left: 120px;
-    padding: 14px 26px;
+    padding: 17px 26px;
     margin: 0;
     width: 244px;
     box-sizing: border-box;
@@ -150,5 +154,6 @@
 
   @media (min-width: @desktop-width) {
     left: 190px;
+    top: 314px;
   }
 }
