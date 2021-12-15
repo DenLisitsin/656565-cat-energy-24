@@ -1,6 +1,7 @@
 .main-example {
   display: flex;
   flex-direction: column;
+  position: relative;
   background-color: #eaeaea;
   margin: 0 auto;
   max-width: 1440px;
@@ -10,8 +11,32 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+.main-example__wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    background-color: #eaeaea;
+  }
+
+  @media (min-width: @desktop-width) {
     flex-direction: row;
-    flex-wrap: wrap;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f2f2f2;
+      content: "";
+    }
   }
 }
 
@@ -33,12 +58,12 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 110px;
-    margin: 0 0 77px;
+    margin: 0 auto 77px;
     width: 1220px;
   }
 }
 
-.main-example__wrapper {
+.main-example__description-wrapper {
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
@@ -47,9 +72,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    background-color: #eaeaea;
+    background-color: transparent;
     padding: 70px 100px 75px 110px;
-    max-width: 436px;
+    max-width: 446px;
+    margin-left: auto;
+    z-index: 2;
   }
 }
 
@@ -73,6 +100,7 @@
   @media (min-width: @desktop-width) {
     margin: 0 0 69px;
     padding-right: 0;
+    max-width: 438px;
   }
 }
 
@@ -114,7 +142,7 @@
 
     &:nth-child(2) {
       .main-example__legend {
-        left: 14px;
+        left: 6px;
       }
     }
   }
@@ -142,12 +170,13 @@
     font-size: 14px;
     line-height: 14px;
     top: 62px;
-    left: 29px;
+    left: 20px;
     width: auto;
     background-color: #ffffff;
+    padding: 0 10px;
 
     @media (min-width: @desktop-width) {
-      background-color: #eaeaea;
+      background-color: #f2f2f2;
     }
   }
 }
@@ -225,14 +254,14 @@
 
   @media (min-width: @tablet-width) {
     position: relative;
-    background-color: #eaeaea;
     padding: 370px 30px 60px;
   }
 
   @media (min-width: @desktop-width) {
     justify-content: space-between;
-    padding: 360px 84px 70px;
+    padding: 360px 103px 70px 84px;
     width: 616px;
+    margin-right: auto;
   }
 }
 
@@ -248,8 +277,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: -179px;
-    left: 93px;
+    top: -178px;
+    left: 84px;
   }
 }
 
@@ -281,6 +310,10 @@
     &:active {
       border-color: transparent;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: #f2f2f2;
   }
 }
 
