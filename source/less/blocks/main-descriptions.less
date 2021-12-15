@@ -1,5 +1,19 @@
 .main-descriptions {
-  padding: 20px;
+  padding: 0 20px 47px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px 70px;
+    border-bottom: 1px solid #d9d9d9;
+    max-width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px 92px;
+    border-bottom: none;
+    max-width: 1440px;
+  }
 }
 
 .main-descriptions__wrapper {
@@ -13,27 +27,206 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  margin: 0 0 40px;
+  margin: 0 0 42px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 0 32px;
+  }
 }
 
 .main-descriptions__list {
   display: flex;
   flex-direction: column;
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  min-width: 256px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 135px;
+    row-gap: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 77px;
+  }
 }
 
 .main-descriptions__item {
+  position: relative;
   font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #444444;
-  margin-bottom: 24px;
+  padding-left: 80px;
+  margin-bottom: 20px;
+  min-height: 60px;
+  z-index: 1;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -2px;
+    left: 0;
+    background-color: @green;
+    content: "";
+  }
+
+  &:nth-child(1) {
+    &::after {
+      position: absolute;
+      width: 30px;
+      height: 32px;
+      top: 12px;
+      left: 15px;
+      background-image: url("../img/description-icon_leaf.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  &:nth-child(2) {
+    &::after {
+      position: absolute;
+      width: 29px;
+      height: 31px;
+      top: 11px;
+      left: 15px;
+      background-image: url("../img/description-icon_tub.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      position: absolute;
+      width: 25px;
+      height: 30px;
+      top: 13px;
+      left: 19px;
+      background-image: url("../img/description-icon_eat.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  &:nth-child(4) {
+    &::after {
+      position: absolute;
+      width: 32px;
+      height: 33px;
+      top: 11px;
+      left: 14px;
+      background-image: url("../img/description-icon_weight.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 151px 0 33px;
+    max-width: 249px;
+    margin-bottom: 0;
+    box-sizing: border-box;
+
+    &::before {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: 40px;
+      left: 0;
+      background-color: @green;
+      content: "";
+    }
+
+    &:nth-child(1) {
+      &::after {
+        position: absolute;
+        width: 30px;
+        height: 32px;
+        top: 65px;
+        left: 24px;
+        background-image: url("../img/description-icon_leaf.svg");
+        background-repeat: no-repeat;
+        content: "";
+      }
+    }
+
+    &:nth-child(2) {
+      &::after {
+        position: absolute;
+        width: 29px;
+        height: 31px;
+        top: 65px;
+        left: 24px;
+        background-image: url("../img/description-icon_tub.svg");
+        background-repeat: no-repeat;
+        content: "";
+      }
+    }
+
+    &:nth-child(3) {
+      &::after {
+        position: absolute;
+        width: 25px;
+        height: 30px;
+        top: 65px;
+        left: 28px;
+        background-image: url("../img/description-icon_eat.svg");
+        background-repeat: no-repeat;
+        content: "";
+      }
+    }
+
+    &:nth-child(4) {
+      &::after {
+        position: absolute;
+        width: 32px;
+        height: 33px;
+        top: 63px;
+        left: 24px;
+        background-image: url("../img/description-icon_weight.svg");
+        background-repeat: no-repeat;
+        content: "";
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 247px;
+    padding: 153px 0 33px;
+  }
+}
+
+.main-descriptions__number {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    color: #f2f2f2;
+    top: 0;
+    left: 114px;
+    margin: 0;
+    z-index: -1;
   }
 }
