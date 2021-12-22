@@ -89,7 +89,9 @@
         </fieldset>
         <fieldset class="page-form__fieldset">
           <section class="page-form__contacts-info">
-            <h2 class="page-form__fieldset-title">Контактные данные (владельца кота)</h2>
+            <div class="page-form__title-wrapper">
+              <h2 class="page-form__fieldset-title">Контактные данные (владельца кота)</h2>
+            </div>
             <div class="page-form__input-wrapper">
               <div class="page-form__input-container">
                 <label class="page-form__label">E-mail:*</label>
@@ -104,43 +106,51 @@
         </fieldset>
         <fieldset class="page-form__fieldset">
           <section class="page-form__comment">
-            <h2 class="page-form__fieldset-title">Комментарий</h2>
-            <textarea class="page-form__textarea" name="comment" cols="39" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="page-form__title-wrapper">
+              <h2 class="page-form__fieldset-title">Комментарий</h2>
+            </div>
+            <div class="page-form__textarea-wrapper">
+              <textarea class="page-form__textarea" name="comment" cols="39" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </section>
         </fieldset>
         <fieldset class="page-form__fieldset">
           <section class="page-form__additionally">
-            <h2 class="page-form__fieldset-title">Дополнительно</h2>
-            <ul class="page-form__list">
-              <li class="page-form__item">
-                <label class="page-form__control" for="shugar">
-                <input class="visually-hidden page-form__control-input" type="checkbox" name="additionally" value="shugar"  id="shugar" checked>
-                  <span class="page-form__control-mark page-form__control-mark--checkbox"></span>
-                  <span class="page-form__checkbox-label">сахарозаменитель</span>
-                </label>
-              </li>
-              <li class="page-form__item">
-                <label class="page-form__control" for="water-checkbox">
-                <input class="visually-hidden page-form__control-input" type="checkbox" name="additionally" value="water" id="water-checkbox">
-                  <span class="page-form__control-mark page-form__control-mark--checkbox"></span>
-                  <span class="page-form__checkbox-label">питьевая вода</span>
-                </label>
-              </li>
-              <li class="page-form__item">
-                <label class="page-form__control" for="milk-checkbox">
-                <input class="visually-hidden page-form__control-input" type="checkbox" name="additionally" value="milk" id="milk-checkbox">
-                  <span class="page-form__control-mark page-form__control-mark--checkbox"></span>
-                  <span class="page-form__checkbox-label">молоко</span>
-                </label>
-              </li>
-              <li class="page-form__item">
-                <label class="page-form__control" for="vitamins-checkbox">
-                <input class="visually-hidden page-form__control-input" type="checkbox" name="additionally" value="vitamins" id="vitamins-checkbox">
-                  <span class="page-form__control-mark page-form__control-mark--checkbox"></span>
-                  <span class="page-form__checkbox-label">витамины</span>
-                </label>
-              </li>
-            </ul>
+            <div class="page-form__title-wrapper">
+              <h2 class="page-form__fieldset-title">Дополнительно</h2>
+            </div>
+            <div class="page-form__list-wrapper">
+              <ul class="page-form__list">
+                <li class="page-form__item">
+                  <label class="page-form__control" for="shugar">
+                  <input class="visually-hidden page-form__control-input" type="checkbox" name="additionally" value="shugar"  id="shugar" checked>
+                    <span class="page-form__control-mark page-form__control-mark--checkbox"></span>
+                    <span class="page-form__checkbox-label">сахарозаменитель</span>
+                  </label>
+                </li>
+                <li class="page-form__item">
+                  <label class="page-form__control" for="water-checkbox">
+                  <input class="visually-hidden page-form__control-input" type="checkbox" name="additionally" value="water" id="water-checkbox">
+                    <span class="page-form__control-mark page-form__control-mark--checkbox"></span>
+                    <span class="page-form__checkbox-label">питьевая вода</span>
+                  </label>
+                </li>
+                <li class="page-form__item">
+                  <label class="page-form__control" for="milk-checkbox">
+                  <input class="visually-hidden page-form__control-input" type="checkbox" name="additionally" value="milk" id="milk-checkbox">
+                    <span class="page-form__control-mark page-form__control-mark--checkbox"></span>
+                    <span class="page-form__checkbox-label">молоко</span>
+                  </label>
+                </li>
+                <li class="page-form__item">
+                  <label class="page-form__control" for="vitamins-checkbox">
+                  <input class="visually-hidden page-form__control-input" type="checkbox" name="additionally" value="vitamins" id="vitamins-checkbox">
+                    <span class="page-form__control-mark page-form__control-mark--checkbox"></span>
+                    <span class="page-form__checkbox-label">витамины</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
           </section>
           <section class="page-form__submit">
             <h2 class="visually-hidden">отправить заявку</h2>
@@ -150,7 +160,7 @@
         </fieldset>
       </form>
     </div>
-    <section class="location">
+    <section class="location location-inner">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <div class="location__address">
         <h2 class="location__title">приглашаем<br> к сотрудничеству дилеров!</h2>

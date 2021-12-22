@@ -18,6 +18,9 @@
 
   @media (min-width: @desktop-width) {
     padding: 45px 110px 0;
+    max-width: 1440px;
+    margin: 0 auto 54px;
+    box-sizing: border-box;
   }
 }
 
@@ -40,6 +43,9 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 1007px 0 110px;
+    max-width: 1440px;
+    margin: 0 auto 66px;
+    box-sizing: border-box;
   }
 }
 
@@ -82,9 +88,10 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 0 70px 110px;
-    margin-right: 80px;
-    min-width: 569px;
+    padding-bottom: 70px;
+    margin: 0 80px auto 70px;
+    margin-left: auto;
+    max-width: 569px;
     width: 50%;
   }
 }
@@ -134,7 +141,7 @@
   font-size: 16px;
   line-height: 18px;
   padding: 13px 15px;
-  border: 1px solid #f7f7f7;
+  border: 1px solid #e7e7e7;
   width: 100%;
 
   &::placeholder {
@@ -197,9 +204,16 @@
     padding: 0;
     margin: 0;
     align-self: flex-start;
-    min-width: 570px;
+    max-width: 570px;
     width: 50%;
-    margin-right: 110px;
+    margin-right: auto;
+  }
+}
+
+.page-form__list-wrapper {
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    min-width: 1440px;
   }
 }
 
@@ -275,8 +289,8 @@
       content: "";
 
       @media (min-width: @tablet-width) {
-        top: 9px;
-        left: 11px;
+        top: 10px;
+        left: 10px;
         width: 18px;
         height: 18px;
       }
@@ -333,62 +347,6 @@
   border-radius: 50%;
 }
 
-/*
-.page-form__control {
-  position: absolute;
-  top: -5px;
-  left: -2px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #cdcdcd;
-  box-sizing: border-box;
-  content: "";
-
-  &:hover {
-    border-color: #bababa;
-  }
-
-  &:disabled {
-    opacity: 0.3;
-    background-color: tomato;
-
-    + .page-form__radio-label,
-    + .page-form__checkbox-label {
-      opacity: 0.3;
-      color: red;
-    }
-  }
-
-  &:checked {
-    + .page-form__control--radio::before {
-      position: absolute;
-      top: 7px;
-      left: 7px;
-      width: 14px;
-      height: 14px;
-      background-color: @green;
-      border-radius: 50%;
-      box-sizing: border-box;
-      content: "";
-    }
-
-    + .page-form__control--checkbox::before {
-      position: absolute;
-      top: 7px;
-      left: 6px;
-      width: 18px;
-      height: 14px;
-      background-image: url("../img/form/icon-checkbox.svg");
-      box-sizing: border-box;
-      content: "";
-    }
-  }
-}
-
-.page-form__control--radio {
-  border-radius: 50%;
-}*/
-
 .page-form__fieldset-title {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -410,6 +368,13 @@
   @media (min-width: @desktop-width) {
     margin-left: 70px;
   }
+}
+
+.page-form__title-wrapper {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
 }
 
 .page-form__contacts-info {
@@ -494,6 +459,7 @@
 
   .page-form__input {
     padding: 13px 50px 13px 10px;
+    border-color: #e7e7e7;
 
     @media (min-width: @tablet-width) {
       padding: 19px 50px 13px 14px;
@@ -508,6 +474,10 @@
       display: flex;
       flex-direction: row;
       padding: 0 110px;
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
     }
   }
 
@@ -555,6 +525,18 @@
   }
 }
 
+.page-form__textarea-wrapper {
+  margin: 0 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 67px 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+  }
+}
+
 .page-form__textarea {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -562,7 +544,10 @@
   font-size: 16px;
   line-height: 18px;
   padding: 12px 13px;
-  margin: 0 20px 24px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-color: #e7e7e7;
 
   &::placeholder {
     text-transform: uppercase;
@@ -576,11 +561,14 @@
 
   @media (min-width: @tablet-width) {
     padding: 10px 18px 37px;
-    margin: 0 70px 65px;
+    margin: 0;
+    box-sizing: border-box;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 111px 67px;
+    margin: 0 auto 63px;
+    min-width: 1220px;
+    box-sizing: border-box;
   }
 }
 
@@ -634,6 +622,8 @@
       column-gap: 104px;
       row-gap: 61px;
       padding: 0 110px;
+      max-width: 1440px;
+      margin: 0 auto;
     }
   }
 
@@ -722,6 +712,8 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 110px;
-    margin-bottom: 82px;
+    margin: 0 auto 82px;
+    min-width: 1440px;
+    box-sizing: border-box;
   }
 }
