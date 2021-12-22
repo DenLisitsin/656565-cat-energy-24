@@ -120,8 +120,9 @@
     flex-direction: row;
     justify-content: end;
   }
+}
 
-
+.main-nav__list--background {
   @media (min-width: @desktop-width) {
     background-color: @green;
 
@@ -199,6 +200,28 @@
   }
 }
 
+.main-nav__item--current-inner {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      position: absolute;
+      top: 32px;
+      left: 1px;
+      width: 100%;
+      height: 2px;
+      background-color: @green;
+      content: "";
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      top: 35px;
+    }
+  }
+}
+
 .main-nav__item a {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -229,5 +252,15 @@
     font-size: 20px;
     line-height: 30px;
     color: #ffffff;
+  }
+}
+
+.main-nav__item--inner a {
+  @media (min-width: @tablet-width) {
+    color: #000000;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: #111111;
   }
 }
