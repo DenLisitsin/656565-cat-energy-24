@@ -7,6 +7,14 @@
   }
 }
 
+.location-inner {
+  background-color: #f2f2f2;
+
+  @media (min-width: @desktop-width) {
+    background-color: #ffffff;
+  }
+}
+
 .location__address {
   display: flex;
   justify-content: space-between;
@@ -99,6 +107,8 @@
 }
 
 .location__map {
+  width: 100%;
+
   @media (min-width: @tablet-width) {
     height: 400px;
   }
