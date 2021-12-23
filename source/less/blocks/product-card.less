@@ -76,12 +76,19 @@
   img {
     display: block;
     margin: 0 auto;
+
+    @media (min-width: @tablet-width) {
+      width: 168px;
+      height: 200px;
+    }
   }
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: -50px;
-    width: 100%;
+    top: -73px;
+    left: -6px;
+    right: 0;
+    margin: 0 auto;
   }
 }
 
@@ -192,7 +199,7 @@
     border-bottom: 1px solid #cdcdcd;
 
     &:not(:last-child) {
-      margin-bottom: 5px;
+      margin-bottom: 7px;
     }
   }
 }
