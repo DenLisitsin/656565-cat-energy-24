@@ -36,9 +36,15 @@
   align-items: center;
   position: relative;
   background-image: url("../img/main-bg.svg");
+  background-size: 320px auto;
   background-position: center;
   background-repeat: no-repeat;
   padding: 27px 35px 164px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/retina/main-bg@2.png");
+    background-size: 320px auto;
+  }
 
   @media (min-width: @tablet-width) {
     align-items: flex-start;
@@ -109,16 +115,22 @@
 .main-logo__image {
   position: absolute;
   top: 55%;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  @media (min-resolution: 2dppx) {
+    width: 280px;
+    height: 270px;
+  }
 
   @media (min-width: @tablet-width) {
     position: static;
-    content: url("../img/main-logo-tablet.png");
     width: 709px;
     height: 609px;
   }
 
   @media (min-width: @desktop-width) {
-    content: url("../img/main-logo-desktop.png");
     position: absolute;
     top: -82px;
     left: 448px;

@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="favicon.webmanifest">
 </head>
 <body class="page__body">
   <header class="page-header page-header--nojs">
@@ -40,7 +44,14 @@
       <div class="main-logo__wrapper">
         <h1 class="main-logo__title">Функциональное питание для котов</h1>
         <p class="main-logo__subtitle">Занялся собой? Займись котом!</p>
-        <img class="main-logo__image" src="img/main-logo-mobile.png" width="280" height="270" alt="Банка корма.">
+        <picture>
+          <source media="(min-width: 1440px) and (min-resolution: 2dppx)" srcset="img/main-logo-desktop@2x.png">
+          <source media="(min-width: 1440px)" srcset="img/main-logo-desktop.png">
+          <source media="(min-width: 768px) and (min-resolution: 2dppx)" srcset="img/main-logo-tablet@2x.png">
+          <source media="(min-width: 768px)" srcset="img/main-logo-tablet.png">
+          <source media="(min-resolution: 2dppx)" srcset="img/main-logo-mobile@2x.png">
+          <img class="main-logo__image" src="img/main-logo-mobile.png" width="280" height="270" alt="Банка корма.">
+        </picture>
       </div>
         <a class="main-logo__button" href="form.html">подобрать программу</a>
     </section>
@@ -100,7 +111,12 @@
           </div>
         </div>
         <div class="main-example__range-wrapper">
-          <img class="main-example__range-image" src="img/fat-cat-mobile.png" width="280" height="232" alt="фото толстого кота.">
+          <picture>
+            <source media="(min-width: 768px) and (min-resolution: 2dppx)" srcset="img/image_cat_tablet@2x.png">
+            <source media="(min-width: 768px)" srcset="img/image_cat_tablet.png">
+            <source media="(min-resolution: 2dppx)" srcset="img/fat-cat-mobile@2x.png">
+            <img class="main-example__range-image" src="img/fat-cat-mobile.png" width="280" height="232" alt="фото толстого кота.">
+          </picture>
           <div class="main-example__range-slider">
             <button class="main-example__button">было</button>
             <span class="visually-hidden">было</span>
@@ -116,11 +132,13 @@
     </section>
     <section class="location">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <div class="location__address">
-        <h2 class="location__title">приглашаем<br> к сотрудничеству дилеров!</h2>
-        <div class="location__text-container">
-          <p class="location__text">ул. Большая Конюшенная, д. 19/8</p>
-          <p class="location__text">Санкт-Петербург</p>
+      <div class="location__container">
+        <div class="location__address">
+          <h2 class="location__title">приглашаем<br> к сотрудничеству дилеров!</h2>
+          <div class="location__text-container">
+            <p class="location__text">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="location__text">Санкт-Петербург</p>
+          </div>
         </div>
       </div>
       <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1996.7929883483553!2d30.3172265!3d59.9687573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1639561450926!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
