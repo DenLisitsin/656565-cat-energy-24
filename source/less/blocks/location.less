@@ -74,6 +74,7 @@
     position: relative;
     min-width: 1440px;
     margin: 0 auto;
+    z-index: 1;
   }
 }
 
@@ -115,9 +116,37 @@
 }
 
 .location__map {
+  position: relative;
   width: 100%;
 
   @media (min-width: @tablet-width) {
     height: 400px;
+  }
+}
+
+.location__map-container {
+  background-image: url("../img/location-map.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/location-map@2x.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/location-map-tablet.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/location-map-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/location-map-desktop.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/location-map-desktop@2x.png");
+    }
   }
 }
