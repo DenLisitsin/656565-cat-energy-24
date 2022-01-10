@@ -64,27 +64,6 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-
-    &:nth-child(1) {
-      svg {
-        width: 30px;
-        height: 32px;
-      }
-    }
-
-    &:nth-child(2) {
-      svg {
-        width: 23px;
-        height: 23px;
-      }
-    }
-
-    &:nth-child(3) {
-      svg {
-        width: 25px;
-        height: 30px;
-      }
-    }
   }
 
   &:last-child {
@@ -101,7 +80,7 @@
 
 .social-container__link {
   &:hover {
-    .social-container__image {
+    svg {
       fill: @green;
     }
   }
@@ -109,6 +88,33 @@
   &:active {
     .social-container__image {
       fill: rgba(104, 183, 56, 0.3);
+    }
+  }
+}
+
+.social-container__item--vk {
+  @media (min-width: @tablet-width) {
+    svg {
+      width: 30px;
+      height: 32px;
+    }
+  }
+}
+
+.social-container__item--instagram {
+  @media (min-width: @tablet-width) {
+    svg {
+      width: 23px;
+      height: 23px;
+    }
+  }
+}
+
+.social-container__item--facebook {
+  @media (min-width: @tablet-width) {
+    svg {
+      width: 25px;
+      height: 30px;
     }
   }
 }
