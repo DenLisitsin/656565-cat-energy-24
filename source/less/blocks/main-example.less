@@ -330,7 +330,10 @@
 .main-example__range-slider {
   display: flex;
   align-items: center;
-  width: 592px;
+
+  @media (min-width: @desktop-width) {
+    width: 592px;
+  }
 }
 
 .main-example__button {

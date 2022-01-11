@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="favicon.webmanifest">
+  </head>
+  <body class="page__body">
+    <header class="page-header page-header--nojs">
+      <div class="page-header__logo-container"><a href="index.html" class="page-header__logo"><img class="page-header__logo-image" src="img/header-logo.svg" width="34" height="38" alt="Логотип сайта."> </a><a href="index.html" class="page-header__logo"><img class="page-header__logo-image" src="img/header-logo2.svg" width="101" height="18" alt="Логотип сайта."></a></div>
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--inner"><a href="index.html">Главная</a></li>
+            <li class="main-nav__item main-nav__item--inner"><a href="catalog.html">каталог продукции</a></li>
+            <li class="main-nav__item main-nav__item--inner main-nav__item--current-inner"><a href="form.html">подбор программы</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-form">
+      <div class="page-form__wrapper">
+        <h1 class="page-form__title">Подбор программы</h1>
+        <p class="page-form__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <form class="page-form__data" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="page-form__fieldset">
+            <section class="page-form__user-info">
+              <h2 class="visually-hidden">данные кота</h2>
+              <div class="page-form__input-wrapper">
+                <div class="page-form__input-container"><label class="page-form__label" for="user-name">ИМЯ:*</label> <input class="page-form__input" type="text" placeholder="БАРСИК" id="user-name" required></div>
+                <div class="page-form__input-container"><label class="page-form__label" for="user-weight">Вес (кг):*</label> <input class="page-form__input" type="text" placeholder="7" id="user-weight" required></div>
+                <div class="page-form__input-container"><label class="page-form__label" for="user-age">Возраст (лет):</label> <input class="page-form__input" type="text" placeholder="7" id="user-age"></div>
+              </div>
+            </section>
+            <section class="page-form__programm-choice">
+              <h2 class="visually-hidden">выбор программы</h2>
+              <div class="page-form__input-wrapper">
+                <ul class="page-form__list">
+                  <li class="page-form__item"><label class="page-form__control"><input class="visually-hidden page-form__control-input" type="radio" name="programm" value="slim" checked="checked"> <span class="page-form__control-mark page-form__control-mark--radio"></span> <span class="page-form__radio-label">Похудение</span></label></li>
+                  <li class="page-form__item"><label class="page-form__control"><input class="visually-hidden page-form__control-input" type="radio" name="programm" value="strong"> <span class="page-form__control-mark page-form__control-mark--radio"></span> <span class="page-form__radio-label">Набор массы</span></label></li>
+                  <li class="page-form__item"><label class="page-form__control"><input class="visually-hidden page-form__control-input" type="radio" name="programm" value="advice"> <span class="page-form__control-mark page-form__control-mark--radio"></span> <span class="page-form__radio-label">Не знаю (Нужен ваш совет)</span></label></li>
+                </ul>
+              </div>
+            </section>
+          </fieldset>
+          <fieldset class="page-form__fieldset">
+            <section class="page-form__contacts-info">
+              <div class="page-form__title-wrapper">
+                <h2 class="page-form__fieldset-title">Контактные данные (владельца кота)</h2>
+              </div>
+              <div class="page-form__input-wrapper">
+                <div class="page-form__input-container">
+                  <label class="page-form__label">E-mail:*</label> <input class="page-form__input" type="email" placeholder="kuklachev@gmail.com" required>
+                  <svg class="page-form__input-email" width="20" height="15" viewBox="0 0 20 15" fill="none" stroke="#222222">
+                    <use xlink:href="img/sprite.svg#email"></use>
+                  </svg>
+                </div>
+                <div class="page-form__input-container">
+                  <label class="page-form__label">Телефон:*</label> <input class="page-form__input" type="tel" placeholder="8 (960) 900-60-90" required>
+                  <svg class="page-form__input-phone" width="20" height="21" viewBox="0 0 20 21" fill="black">
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                  </svg>
+                </div>
+              </div>
+            </section>
+          </fieldset>
+          <fieldset class="page-form__fieldset">
+            <section class="page-form__comment">
+              <div class="page-form__title-wrapper">
+                <h2 class="page-form__fieldset-title">Комментарий</h2>
+              </div>
+              <div class="page-form__textarea-wrapper"><textarea class="page-form__textarea" name="comment" cols="39" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea></div>
+            </section>
+          </fieldset>
+          <fieldset class="page-form__fieldset">
+            <section class="page-form__additionally">
+              <div class="page-form__title-wrapper">
+                <h2 class="page-form__fieldset-title">Дополнительно</h2>
+              </div>
+              <div class="page-form__list-wrapper">
+                <ul class="page-form__list">
+                  <li class="page-form__item"><label class="page-form__control" for="shugar"><input class="visually-hidden page-form__control-input" type="checkbox" name="additionally" value="shugar" id="shugar" checked="checked"> <span class="page-form__control-mark page-form__control-mark--checkbox"></span> <span class="page-form__checkbox-label">сахарозаменитель</span></label></li>
+                  <li class="page-form__item"><label class="page-form__control" for="water-checkbox"><input class="visually-hidden page-form__control-input" type="checkbox" name="additionally" value="water" id="water-checkbox"> <span class="page-form__control-mark page-form__control-mark--checkbox"></span> <span class="page-form__checkbox-label">питьевая вода</span></label></li>
+                  <li class="page-form__item"><label class="page-form__control" for="milk-checkbox"><input class="visually-hidden page-form__control-input" type="checkbox" name="additionally" value="milk" id="milk-checkbox"> <span class="page-form__control-mark page-form__control-mark--checkbox"></span> <span class="page-form__checkbox-label">молоко</span></label></li>
+                  <li class="page-form__item"><label class="page-form__control" for="vitamins-checkbox"><input class="visually-hidden page-form__control-input" type="checkbox" name="additionally" value="vitamins" id="vitamins-checkbox"> <span class="page-form__control-mark page-form__control-mark--checkbox"></span> <span class="page-form__checkbox-label">витамины</span></label></li>
+                </ul>
+              </div>
+            </section>
+            <section class="page-form__submit">
+              <h2 class="visually-hidden">отправить заявку</h2>
+              <button class="page-form__button" type="submit">отправить заявку</button>
+              <p class="page-form__correction">* — Обязательные поля</p>
+            </section>
+          </fieldset>
+        </form>
+      </div>
+      <section class="location location-inner">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <div class="location__container">
+          <div class="location__address">
+            <h2 class="location__title">приглашаем<br>к сотрудничеству дилеров!</h2>
+            <div class="location__text-container">
+              <p class="location__text">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="location__text">Санкт-Петербург</p>
+            </div>
+          </div>
+        </div>
+        <div class="location__map-container"><iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1996.7929883483553!2d30.3172265!3d59.9687573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1639561450926!5m2!1sru!2sru" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe></div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__link"><img src="img/footer-logo-cat-energy.svg" width="128" height="24" alt="название сайта."></a>
+        <div class="social-container">
+          <ul class="social-container__list">
+            <li class="social-container__item social-container__item--vk">
+              <a href="#" class="social-container__link">
+                <svg class="social-container__image" width="23" height="16" viewBox="0 0 30 22" fill="#666666">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+                <span class="visually-hidden">vkontakte</span>
+              </a>
+            </li>
+            <li class="social-container__item social-container__item--instagram">
+              <a href="#" class="social-container__link">
+                <svg class="social-container__image" width="16" height="16" viewBox="0 0 23 23" fill="#666666">
+                  <use xlink:href="img/sprite.svg#instagram"></use>
+                </svg>
+                <span class="visually-hidden">instagram</span>
+              </a>
+            </li>
+            <li class="social-container__item social-container__item--facebook">
+              <a href="#" class="social-container__link">
+                <svg class="social-container__image" width="13" height="20" viewBox="0 0 15 29" fill="none" stroke="#666666">
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg>
+                <span class="visually-hidden">facebook</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__academy-container">
+          <a class="page-footer__academy-link" href="#">HTML Academy</a>
+          <a class="page-footer__academy-link-logo" href="#">
+            <svg width="27" height="34" fill="#666">
+              <use xlink:href="img/sprite.svg#html-logo"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
