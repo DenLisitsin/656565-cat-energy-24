@@ -123,6 +123,7 @@
 .page-form__input-container {
   display: flex;
   align-items: center;
+  position: relative;
   margin-bottom: 14px;
 
   &:last-child {
@@ -131,6 +132,55 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
+  }
+
+  .page-form__input-email {
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    width: 20px;
+    height: 15px;
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      top: 20px;
+      right: 12px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 19px;
+      right: 19px;
+    }
+  }
+
+  &:nth-child(1) {
+    @media (min-width: @desktop-width) {
+      margin-right: 78px;
+    }
+  }
+
+  .page-form__input-phone {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      top: 18px;
+      right: 12px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 16px;
+      right: 16px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: baseline;
+    width: 100%;
   }
 }
 
@@ -168,6 +218,14 @@
     outline: 2px solid #444444;
   }
 
+  &:focus + .page-form__input-email {
+    stroke: @green;
+  }
+
+  &:focus + .page-form__input-phone {
+    fill: @green;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 18px 16px 14px 14px;
   }
@@ -177,6 +235,10 @@
 .page-form__input--invalid {
   border-color: transparent;
   outline: 2px solid #ff8282;
+
+  svg {
+    stroke: #ff8282;
+  }
 }
 
 .page-form__programm-choice {
@@ -302,7 +364,7 @@
       left: 6px;
       width: 18px;
       height: 14px;
-      background-image: url("../img/form/icon-checkbox.svg");
+      background-image: url("../img/icon-checkbox.svg");
       background-repeat: no-repeat;
       background-position: center;
       box-sizing: border-box;
@@ -395,65 +457,6 @@
 
     @media (min-width: @tablet-width) {
       top: 23px;
-    }
-  }
-
-  .page-form__input-container {
-    position: relative;
-
-    &:nth-child(1)::before {
-      position: absolute;
-      top: 16px;
-      right: 15px;
-      width: 20px;
-      height: 14px;
-      background-image: url("../img/form/icon-email.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      content: "";
-
-      @media (min-width: @tablet-width) {
-        top: 20px;
-        right: 12px;
-      }
-
-      @media (min-width: @desktop-width) {
-        top: 19px;
-        right: 19px;
-      }
-    }
-
-    &:nth-child(1) {
-      @media (min-width: @desktop-width) {
-        margin-right: 78px;
-      }
-    }
-
-    &:nth-child(2)::before {
-      position: absolute;
-      top: 13px;
-      right: 13px;
-      width: 20px;
-      height: 20px;
-      background-image: url("../img/form/icon-phone.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      content: "";
-
-      @media (min-width: @tablet-width) {
-        top: 18px;
-        right: 12px;
-      }
-
-      @media (min-width: @desktop-width) {
-        top: 16px;
-        right: 16px;
-      }
-    }
-
-    @media (min-width: @desktop-width) {
-      align-self: baseline;
-      width: 50%;
     }
   }
 
