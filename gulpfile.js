@@ -88,7 +88,7 @@ const sprite = () => {
 
 // JS
 
-export const JSmin = () => {
+const JSmin = () => {
   return gulp.src('source/js/*.js')
     .pipe(minify())
     .pipe(gulp.dest('build/js'));
