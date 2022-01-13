@@ -12,6 +12,7 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
 import browser from 'browser-sync';
+import minify from 'gulp-minify';
 
 // Styles
 
@@ -85,6 +86,14 @@ const sprite = () => {
     .pipe(gulp.dest('build/img'));
 }
 
+// JS
+
+export const JSmin = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(minify())
+    .pipe(gulp.dest('build/js'));
+}
+
 // Copy
 
 const copy = (done) => {
@@ -146,7 +155,8 @@ export const build = gulp.series(
     scripts,
     svg,
     sprite,
-    createWebp
+    createWebp,
+    JSmin
   ),
 );
 
@@ -163,7 +173,8 @@ export default gulp.series(
     scripts,
     svg,
     sprite,
-    createWebp
+    createWebp,
+    JSmin
   ),
   gulp.series(
     server,
