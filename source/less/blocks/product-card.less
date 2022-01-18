@@ -59,7 +59,7 @@
   }
 }
 
-.product-card {
+.product-card__container {
   display: flex;
   margin-bottom: 13px;
 
@@ -86,18 +86,22 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     top: -73px;
-    left: -6px;
+    left: 0;
     right: 0;
-    margin: 0 auto;
+    width: 100%;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
     top: -79px;
-    left: -41px;
+    left: 0;
     right: 0;
-    margin: 0 auto;
   }
+}
+
+.product-card__title-link {
+  text-decoration: none;
+  color: #222222;
 }
 
 .product-card__info {
@@ -112,7 +116,7 @@
 }
 
 .product-card__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -154,7 +158,7 @@
 }
 
 .product-card__subtitle {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -189,7 +193,7 @@
   justify-content: space-between;
 
   p {
-    font-family: "Arial", sans-serif;
+    font-family: "Arial", "Tahoma", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -213,7 +217,7 @@
 }
 
 .product-card__button {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -227,6 +231,14 @@
   width: 100%;
   display: block;
   box-sizing: border-box;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     padding: 10px 20px;
@@ -294,7 +306,7 @@
 }
 
 .product-card__show-button {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

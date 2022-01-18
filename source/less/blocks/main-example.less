@@ -41,7 +41,7 @@
 }
 
 .main-example__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -82,7 +82,7 @@
 
 
 .main-example__description {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -157,7 +157,7 @@
   top: 45px;
   left: 18px;
   background-color: #eaeaea;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -182,7 +182,7 @@
 }
 
 .main-example__text {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -216,7 +216,7 @@
 }
 
 .main-example__expenses {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -316,7 +316,7 @@
     top: 0;
     left: 0;
     width: 654px;
-    height: 511px;
+    height: 498px;
   }
 
   @media (min-width: @desktop-width) {
@@ -325,6 +325,11 @@
     left: 0;
     height: auto;
   }
+}
+
+.main-example__skinny-cat-image {
+  width: 537px;
+  height: 509px;
 }
 
 .main-example__range-slider {
@@ -337,7 +342,7 @@
 }
 
 .main-example__button {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -404,9 +409,15 @@
     border: 1px solid #cdcdcd;
     border-radius: 50%;
     box-sizing: border-box;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+
+    &:hover {
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+    }
 
     &:active {
       border: 1px solid @green;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
     }
 
     &::before {

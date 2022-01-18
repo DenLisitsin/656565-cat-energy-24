@@ -1,5 +1,5 @@
 .page-form__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -25,7 +25,7 @@
 }
 
 .page-form__subtitle {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -99,7 +99,7 @@
 .page-form__label {
   display: block;
   position: relative;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -185,7 +185,7 @@
 }
 
 .page-form__input {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -193,9 +193,11 @@
   padding: 13px 15px;
   border: 1px solid #e7e7e7;
   width: 100%;
+  max-height: 52px;
+  box-sizing: border-box;
 
   &::placeholder {
-    font-family: "Oswald", sans-serif;
+    font-family: "Oswald", "Tahoma", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -236,7 +238,7 @@
   border-color: transparent;
   outline: 2px solid #ff8282;
 
-  svg {
+  + svg {
     stroke: #ff8282;
   }
 }
@@ -245,12 +247,6 @@
   border-bottom: 1px solid #d9d9d9;
   padding-bottom: 25px;
   margin-bottom: 26px;
-
-  .page-form__list {
-    @media (min-width: @tablet-width) {
-      border: 1px solid #e7e7e7;
-    }
-  }
 
   .page-form__label {
     padding-left: 45px;
@@ -322,12 +318,12 @@
 
 .page-form__checkbox-label,
 .page-form__radio-label {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  color: #222222;
+  color: #000000;
   text-transform: uppercase;
   display: block;
 
@@ -378,13 +374,15 @@
     }
   }
 
-  &:disabled {
+  &:focus {
     + .page-form__control-mark {
-      opacity: 0.3;
+      border-color: #bababa;
     }
+  }
 
-    + .page-form__checkbox-label {
-      color: #ff8282;
+  &:disabled {
+    ~ span {
+      opacity: 0.3;
     }
   }
 }
@@ -410,7 +408,7 @@
 }
 
 .page-form__fieldset-title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -541,7 +539,7 @@
 }
 
 .page-form__textarea {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -550,7 +548,7 @@
   margin: 0;
   width: 100%;
   box-sizing: border-box;
-  border-color: #e7e7e7;
+  border: 1px solid #e7e7e7;
 
   &::placeholder {
     text-transform: uppercase;
@@ -651,7 +649,7 @@
 }
 
 .page-form__button {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -663,10 +661,19 @@
   background-color: @green;
   padding: 7px 20px;
   width: 240px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .page-form__correction {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Tahoma", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
